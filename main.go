@@ -68,6 +68,7 @@ func updateBook(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+	json.NewEncoder(w).Encode(books)
 }
 
 func deleteBook(w http.ResponseWriter, r *http.Request) {
